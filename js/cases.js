@@ -17,6 +17,32 @@ export const casesData = {
             },
         ]
     },
+    "2": {
+        name: "ЛАБУБУ",
+        image: "https://i.ibb.co/2121Qtvc/2025-07-13-2-26-30-AM-Photoroom-1.png",
+        items: [
+            {
+                "name": "FN FAL Leather",
+                "chance": 0.02
+            },
+            {
+                "name": "USP 2 Years",
+                "chance": 0.08
+            },
+            {
+                "name": "Desert Eagle Morgan",
+                "chance": 0.1
+            },
+            {
+                "name": "MP7 Banana",
+                "chance": 0.4
+            },
+            {
+                "name": "M40 Grip",
+                "chance": 0.4
+            },
+        ]
+    },
 };
 export function getItemData(itemName) {
     const item = itemsData[itemName];
@@ -225,7 +251,7 @@ function openCase(caseId) {
 
     // 3. Анимация (точь-в-точь как в вашем примере)
     // const stopPosition = -(TARGET_INDEX * ITEM_WIDTH) + (ITEM_WIDTH * 2) + randomInRange(-10,80); // Центрируем
-    const stopPosition = -(TARGET_INDEX * ITEM_WIDTH) + (ITEM_WIDTH * 2) + randomInRange(-10,10); // Центрируем
+    const stopPosition = -(TARGET_INDEX * ITEM_WIDTH) + (ITEM_WIDTH * 2) + randomInRange(0,-80); // Центрируем
     let startTime = null;
     function animate(timestamp) {
         if (!startTime) startTime = timestamp;
